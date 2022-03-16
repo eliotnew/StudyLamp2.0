@@ -1,0 +1,96 @@
+﻿<<div id="start">
+
+    <p><i> Select the amount of time you wish to study for and choose a hue for your study lamp. Then press submit.</i></p>
+
+
+    <form action="inputformresults.js" method="GET" id="myForm"
+          onsubmit="handlesubmit()">
+
+        <div>
+            <label for="userName">Your Name</label>
+            <input name="userName" id="userNameres" required>
+        </div>
+        <div>
+            <!-- Colour picker with a default value of orange yellow for the bulb-->
+            <label for="color">Select Bulb Hue:</label>
+            <input type="color" value="#ffd699" name="color" id="colorres">
+        </div>
+        <div>
+
+            <!-- Time selector box-->
+            <label for="timeSession">Select Study Period Duration:</label>
+            <select name="timeSession" id="timeSessionres" required multiple>
+                <option value="0.125">Demo (7 Seconds)</option>
+                <option value="1">Demo (1min)</option>
+                <option value="5">5 mins</option>
+                <option value="10">10 mins</option>
+                <option value="15">15 mins</option>
+                <option value="20">20 mins</option>
+                <option value="30">Half an Hour</option>
+                <option value="45">45 mins</option>
+                <option value="60">1 Hour</option>
+                <option value="90">1 & a Half Hours</option>
+                <option value="120">2 Hours</option>
+            </select>
+
+        </div>
+
+        <div>
+            <button type="reset">Reset</button>
+
+            <button type="submit" id="goButton">Start my Study Session!</button>
+        </div>
+
+        <script>
+
+
+            //when submit is pressed storage.set
+            // document.getElementById("goButton").addEventListener("click", ***this is where i can call my function****)
+            //var timesession = document.getElementbyid("ie timesession") - gets value from form
+
+
+            //this uses the FormData API that is built into browsers to access form values in JS
+            function handleSubmit(event) {
+
+                event.preventDefault();
+
+
+                var userName = document.getElementById("userNameres"); //creates variable put of the HTML form using the id
+                localStorage.setItem("userName", userNameres.value); //sets the key value pair in my browser local storage
+
+                var colour = document.getElementById("colorres");
+                localStorage.setItem("colour", colorres.value);
+
+                var timeSession = document.getElementById("timeSessionres");
+                localStorage.setItem("timeSession", timeSessionres.value);
+
+
+                 if (!localStorage.getItem('totalTimeStudied')) {
+
+                     var totalTimeStudied = localStorage.setItem("totalTimeStudied", 0);
+                  }
+
+
+
+
+                window.location.href = '/inprogress';
+
+
+
+
+
+
+            }
+            const form = document.querySelector('form');
+            form.addEventListener('submit', handleSubmit);
+
+
+
+        </script>
+
+
+
+
+    </form>
+</div>
+
