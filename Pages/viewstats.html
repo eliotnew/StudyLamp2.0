@@ -1,10 +1,31 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
+﻿<div id="studystats">
 
-</body>
-</html>
+    <p><strong> Your name:</strong></p>
+    <p id="name">name</p>
+    <script>
+        const name = document.getElementById("name");
+        var gotname = localStorage.getItem("userName");
+        name.innerHTML = gotname;
+    </script>
+
+
+    <p><strong> Your last study session's duration (mins):</strong></p>
+    <p id="lastStudy">lastStudy</p>
+    <script>
+        const lastStudy = document.getElementById("lastStudy");
+        var gotlast = localStorage.getItem("timeSession");
+        lastStudy.innerHTML = gotlast;
+    </script>
+
+
+    <p><strong>Your total accumulated study time (mins) </strong> </p>
+    <p id="accumulated">accumulated</p>
+    <script>
+        const accumulated = document.getElementById("accumulated");
+        var gotacc = localStorage.getItem("totalTimeStudied");
+        accumulated.innerHTML = gotacc;
+    </script>
+
+
+
+</div>

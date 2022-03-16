@@ -1,0 +1,45 @@
+﻿<div>
+
+    <script>
+    function accumulateAssign() {
+
+        var timeToStudyString = localStorage.getItem("timeSession"); //gets from local storage the timer
+        var timeToStudyFloat = parseFloat(timeToStudyString); //converts minitues to seconds then milliseconds
+        var toAccumulate = localStorage.getItem("totalTimeStudied");
+        var toAccumulateFloat = parseFloat(toAccumulate);
+
+        var accumulated = toAccumulateFloat += timeToStudyFloat;
+        localStorage.setItem("totalTimeStudied", accumulated);
+
+    }
+
+
+
+</script>
+
+<html>
+
+<body onload="accumulateAssign()">
+
+    Well Done!
+    Want to do another?
+
+
+    <br /><button onclick="window.location.href = '/startstudy'">Yes!</button>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
