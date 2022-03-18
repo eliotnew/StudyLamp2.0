@@ -8,4 +8,8 @@
     <Folder Include="wwwroot\img\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\about.html" />
+  </ItemGroup>
+
 </Project>
