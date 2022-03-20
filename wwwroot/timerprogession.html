@@ -1,13 +1,8 @@
 ﻿<div>
-
     <div>
         <p> Focus! It's study time now, keep going until the lights switch off!</p>
         <img src="https://i.gifer.com/embedded/download/P0i7.gif" alt="book gif from internet" style="width:500px;height:500px;" />
-
-
     </div>
-
-
     <script>
         //Collects the variable from the local storage
         var timeToStudyString = localStorage.getItem("timeSession"); //gets from local storage the timer
@@ -16,8 +11,6 @@
         var seconds = timeToStudyFloat * 60; //just the seconds
         var putDetails = { "on": true, "bri": 16, "hue": 42227 };
 
-
-
         $.ajax({
             url: "http://192.168.0.50/api/stlaB2I6VZ8O80Qepc-1xfmLrHgyTFvB9IGupaQz/lights/4/state",
             type: "PUT",
@@ -25,8 +18,6 @@
 
         })
         window.alert("lights should outputnow");
-
-
     </script>
 
     <button onclick="cancelTimer()">Cancel study and return</button>
@@ -35,8 +26,6 @@
         function timerDone() {
 
             window.location.href = '/sessionComplete';
-
-
         }
 
         timeout = setTimeout(timerDone, convertedTime); //this runs on timeout (runs timerDone)
@@ -47,17 +36,6 @@
             window.location.href = '/startstudy';
         }
 
-
-
     </script>
-
-
-
-
-
-
-
-
-
 
 </div>

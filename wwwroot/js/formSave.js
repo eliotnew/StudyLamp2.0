@@ -3,7 +3,7 @@ document.getElementById("goButton").addEventListener("click", formToLocalStorage
 
 function formToLocalStorage(event) {
 
-    event.preventDefault();
+    
 
 
     var userName = document.getElementById("userNameres"); //creates variable put of the HTML form using the id
@@ -20,6 +20,11 @@ function formToLocalStorage(event) {
 
         var totalTimeStudied = localStorage.setItem("totalTimeStudied", 0);
     }
-    window.alert("saved to local");
+
+   
+
+    $('#page-content-wrapper').load('homescreen.html');
+
 }
+
 
