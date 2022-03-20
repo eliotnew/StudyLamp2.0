@@ -12,7 +12,7 @@
     <None Include="wwwroot\about.html" />
     <None Include="wwwroot\completed.html" />
     <None Include="wwwroot\startstudy.html" />
-    <None Include="wwwroot\timerprogession.html" />
+    <None Include="wwwroot\timerprogression.html" />
     <None Include="wwwroot\viewstats.html" />
   </ItemGroup>
 
