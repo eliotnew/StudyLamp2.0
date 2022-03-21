@@ -2,13 +2,15 @@
     <script type="text/javascript" src="js/accumulateStudyTime.js"></script>
     <script type="text/javascript" src="js/redirectionFunctions.js"></script>
 </div>
-<body onload="accumulateAssign()">
+<body>
+    <script>accumulateAssign();</script>
     <!--Problematic page-->
     <!-- accumulateAssign doesnt work-->
     Well Done!
     Want to do another?
     <!--redirection doesnt work Below doest work-->
     <br /> <button type="button" onclick="redirectRestartLamp();" id="doAnother">Yes!</button>
+    <br /> <button type="button" onclick="redirectHome();" id="dontAnother">No</button>
 </body>
 
 
