@@ -1,31 +1,28 @@
 ﻿<div id="studystats">
 
     <p><strong> Your name:</strong></p>
-    <p id="name">name</p>
-    <script>
-        const name = document.getElementById("name");
-        var gotname = localStorage.getItem("userName");
-        name.innerHTML = gotname;
+    <p id="name">Input name in start study field</p>
+    <script>        
+        var gotname = localStorage.getItem("userName");        
+        document.getElementById("name").innerHTML = gotname;        
     </script>
 
 
     <p><strong> Your last study session's duration (mins):</strong></p>
-    <p id="lastStudy">lastStudy</p>
+    <p id="lastStudy">Do a study session to view stats</p>
     <script>
-        const lastStudy = document.getElementById("lastStudy");
         var gotlast = localStorage.getItem("timeSession");
-        lastStudy.innerHTML = gotlast;
+        document.getElementById("lastStudy").innerHTML = gotlast;
     </script>
 
 
     <p><strong>Your total accumulated study time (mins) </strong> </p>
-    <p id="accumulated">accumulated</p>
+    <p id="accumulated">Do a study session to view stats</p>
     <script>
-        const accumulated = document.getElementById("accumulated");
         var gotacc = localStorage.getItem("totalTimeStudied");
-        accumulated.innerHTML = gotacc;
+        document.getElementById("accumulated").innerHTML = gotacc;
     </script>
 
-
+    <!--check that the browser isnt storing cache (holding old code)-->
 
 </div>
