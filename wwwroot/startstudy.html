@@ -1,42 +1,44 @@
-﻿<<div id="start">
+﻿<div id="start">
 
     <p><i> Select the amount of time you wish to study for and choose a hue for your study lamp. Then press submit.</i></p>
     <script type="text/javascript" src="js/formSave.js"></script>
     <script type="text/javascript" src="js/spa.js"></script>
-
-
-        <div>
-            <label for="userName">Your Name</label>
-            <input name="userName" id="userNameres" required>
-        </div>
-        <div>
-            <!-- Colour picker with a default value of orange yellow for the bulb-->
-            <label for="color">Select Bulb Hue:</label>
-            <input type="color" value="#ffd699" name="color" id="colorres">
-        </div>
-        <div>
-            <!-- Time selector box-->
-            <label for="timeSession">Select Study Period Duration:</label>
-            <select name="timeSession" id="timeSessionres" required multiple>
-                <option value="0.125">Demo (7 Seconds)</option>
-                <option value="1">Demo (1min)</option>
-                <option value="5">5 mins</option>
-                <option value="10">10 mins</option>
-                <option value="15">15 mins</option>
-                <option value="20">20 mins</option>
-                <option value="30">Half an Hour</option>
-                <option value="45">45 mins</option>
-                <option value="60">1 Hour</option>
-                <option value="90">1 & a Half Hours</option>
-                <option value="120">2 Hours</option>
-            </select>
-        </div>
-        <div>
-            <button type="reset">Reset</button>
-            <button type="button" onclick="formToLocalStorage()" id="goButton">Start my Study Session!</button>
-        </div>
+    <div>
+        <label for="userName">Your Name</label>
+        <input name="userName" id="userNameres" required>
+    </div>
+    <div>
+        <!--Selector for colour-->
+        <label for="color">Select Bulb Hue:</label><br />
+        <select id="colorres" name="color" size="5">
+            <option value="1111">White</option>
+            <option value="2222">Blue</option>
+            <option value="3333" selected>Purple</option>
+            <option value="4444">Green</option>
+            <option value="5555">Yellow</option>
+        </select>
+    </div>
+    <div>
+        <!-- Time selector box-->
+        <label for="timeSession">Select Study Period Duration:</label><br />
+        <select name="timeSession" id="timeSessionres" required multiple>
+            <option value="0.125">Demo (7 Seconds)</option>
+            <option value="1">Demo (1min)</option>
+            <option value="5">5 mins</option>
+            <option value="10">10 mins</option>
+            <option value="15">15 mins</option>
+            <option value="20">20 mins</option>
+            <option value="30">Half an Hour</option>
+            <option value="45">45 mins</option>
+            <option value="60">1 Hour</option>
+            <option value="90">1 & a Half Hours</option>
+            <option value="120">2 Hours</option>
+        </select>
+    </div>
+    <div>
+        <button type="reset">Reset</button>
+        <button type="button" onclick="formToLocalStorage()" id="goButton">Start my Study Session!<</button>
+    </div>
     <!-- all scripts are handled externally-->
-        
-  
 </div>
 

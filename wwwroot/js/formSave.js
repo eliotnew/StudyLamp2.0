@@ -12,8 +12,13 @@ function formToLocalStorage(event) {
     var timeSession = document.getElementById("timeSessionres");
     localStorage.setItem("timeSession", timeSessionres.value);
 
-
+    //If there is no previous study time, creates one
     if (!localStorage.getItem('totalTimeStudied')) {
+
+        var totalTimeStudied = localStorage.setItem("totalTimeStudied", 0);
+    }
+    //if in error, it is NaN, makes it zero
+    if (localStorage.getItem('totalTimeStudied') == "NaN") {
 
         var totalTimeStudied = localStorage.setItem("totalTimeStudied", 0);
     }
