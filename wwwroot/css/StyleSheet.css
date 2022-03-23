@@ -1,5 +1,10 @@
-﻿body {
-    background-image: url(/img/gradientyellow.jpg);
-    background-repeat: repeat-x;
-   
+﻿.centered-div{
+    width: 100%;
+    height: 25%;
+    text-align:center;
+}
+.left-div {
+    width: 50%;
+    height: 25%;
+    text-align: left;
 }
