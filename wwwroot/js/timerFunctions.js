@@ -5,7 +5,10 @@ function timerCreateAndSave() {
     var timeToStudyFloat = parseFloat(timeToStudyString); //converts minitues to seconds then milliseconds
     var convertedTime = timeToStudyFloat * 60 * 1000; //converts minitues to seconds then milliseconds
     var seconds = timeToStudyFloat * 60; //just the seconds
-    var putDetails = { "on": true, "bri": 16, "hue": 42227 };
+
+    var colourselect = localStorage.getItem("colour");
+
+    var putDetails = { "on": true, "bri": 16, "hue": colourselect }; //this was RECENTLY ADDED to play around with (the variable)
 
     //starts timer
     timeout = setTimeout(timerDone, convertedTime);
