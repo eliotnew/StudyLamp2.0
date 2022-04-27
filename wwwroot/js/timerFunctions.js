@@ -18,7 +18,7 @@ function timerCreateAndSave() {
     
     var putDetails = { "on": true, "bri": 16, "hue": colourselect }; //this was RECENTLY ADDED to play around with (the variable)
 
-    var data = '{ "on": true, "bri": 100, "hue": ' + colourselect + ', "sat": ' + saturation + ' }; ';
+    var data = '{ "on": true, "bri": 100, "hue": ' + colourselect + ', "sat": ' + saturation + ' }';
     var dataString = String(data);
     var data2 = '{ "on": true, "bri": 100, "hue": 25515, "sat": 255 }';//dev hardcode should be deleted when done
 
@@ -43,12 +43,8 @@ function timerCreateAndSave() {
         }
     };
 
-    
 
-    xhr.send(data2);
-
-
-    
+    xhr.send(data);
 
 }
 
