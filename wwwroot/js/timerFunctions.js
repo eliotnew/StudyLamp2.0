@@ -10,9 +10,19 @@ function timerCreateAndSave() {
     var convertedTime = timeToStudyFloat * 60 * 1000; //converts minitues to seconds then milliseconds
     var seconds = timeToStudyFloat * 60; //just the seconds
     var colourselect = localStorage.getItem("colour");
+    var saturation = 255;
+
+    if (colourselect == 0) {
+        saturation = 0;
+    }
     
     var putDetails = { "on": true, "bri": 16, "hue": colourselect }; //this was RECENTLY ADDED to play around with (the variable)
-    
+
+    var data = '{ "on": true, "bri": 100, "hue": ' + colourselect + ', "sat": ' + saturation + ' }; ';
+    var dataString = String(data);
+    var data2 = '{ "on": true, "bri": 100, "hue": 25515, "sat": 255 }';//dev hardcode should be deleted when done
+
+
 
     //starts timer
     timeout = setTimeout(timerDone, convertedTime);
@@ -33,9 +43,9 @@ function timerCreateAndSave() {
         }
     };
 
-    var data = '{ "on": true, "bri": 100 }';
+    
 
-    xhr.send(data);
+    xhr.send(data2);
 
 
     
