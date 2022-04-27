@@ -12,6 +12,9 @@ function formToLocalStorage(event) {
     var timeSession = document.getElementById("timeSessionres");
     localStorage.setItem("timeSession", timeSessionres.value);
 
+    var lightSelect = document.getElementById("light");
+    localStorage.setItem("lightSelect", lightSelect.value);
+
     //If there is no previous study time, creates one
     if (!localStorage.getItem('totalTimeStudied')) {
 
